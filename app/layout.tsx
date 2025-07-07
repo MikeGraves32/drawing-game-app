@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,9 +14,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "Drawing Game",
-  description: "GravSon",
+  title: "Grammar Gone Wild",
+  description:
+    "Developed by GravSon: Mike Graves [Game Creator, Creative Partner & Co-Director], Mike Dawson [Contributor, Creative Partner & Co-Director]",
 };
 
 export default function RootLayout({
@@ -27,7 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <nav className={inter.className}>
+          <Link href="/">Home</Link> |{" "}
+          <Link href="/instructions">Game Rules & Instructions</Link> |{" "}
+          <Link href="/settings">Settings</Link>
+        </nav>
+        <main>{children}</main>
       </body>
     </html>
   );
