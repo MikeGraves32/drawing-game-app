@@ -18,11 +18,14 @@ export default async function Page() {
       <h1>Noun</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3">
         <ul>
-          {data1.map((item) => (
-            <li key={item.id}>
-              {item.grammarType} | {item.category} | {item.text}
-            </li>
-          ))}
+          {" "}
+          <Card>
+            {data1.map((item) => (
+              <li key={item.id}>
+                {item.grammarType} | {item.category} | {item.text}
+              </li>
+            ))}
+          </Card>
         </ul>
       </div>
       <h1>Verb</h1>
