@@ -1,7 +1,10 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { DataItem } from "../public/types"; // Adjust path as needed
-import { Card } from "./components/Card";
+
+const nounsAnimals = "references/nouns/nouns-animals.json";
+const verbsCookingFood = "references/verbs/verbs-cooking-food.json";
+// import Card from "./components/Card";
 
 async function getData(filename: string): Promise<DataItem[]> {
   const filePath = path.join(process.cwd(), "public", filename);
@@ -10,8 +13,8 @@ async function getData(filename: string): Promise<DataItem[]> {
 }
 
 export default async function Page() {
-  const data1 = await getData("references/nouns/nouns-animals.json");
-  const data2 = await getData("references/verbs/verbs-communication.json");
+  const dataNounsAnimals = await getData(nounsAnimals);
+  const dataVerbsCookingFood = await getData(verbsCookingFood);
 
   return (
     <div>
@@ -19,19 +22,17 @@ export default async function Page() {
       <div className="grid grid-cols-2 sm:grid-cols-3">
         <ul>
           {" "}
-          <Card>
-            {data1.map((item) => (
-              <li key={item.id}>
-                {item.grammarType} | {item.category} | {item.text}
-              </li>
-            ))}
-          </Card>
+          {dataNounsAnimals.map((item) => (
+            <li key={item.id}>
+              {item.grammarType} | {item.category} | {item.text}
+            </li>
+          ))}
         </ul>
       </div>
       <h1>Verb</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3">
         <ul>
-          {data2.map((item) => (
+          {dataVerbsCookingFood.map((item) => (
             <li key={item.id}>
               {item.grammarType} | {item.category} | {item.text}
             </li>

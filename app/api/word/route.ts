@@ -1,4 +1,5 @@
-export async function GET() {
+
+/* export async function GET() {
 
 const nounsAnimals = [
 { id:1, category: "Animals", grammarType: "Common Noun", text: "a dog"}, 
@@ -39,52 +40,52 @@ export async function POST(request: Request) {
     status: 201,
     headers: { 'Content-Type': 'application/json'}
   })
-}
+} */
 
 
-/* import { promises as fs } from 'fs';
+import { promises as fs } from 'fs';
 import { NextResponse } from 'next/server';
-import {getDataFromFile} from '.../pages/nouns/nouns-animals.json' */
+import { getDataFromFile } from 'public/references/nouns/nouns-animals.json'
 
-/* export default async function handler({res, req}) { // Or using the App Router's route.js file, define your HTTP method function, e.g., export async function GET(request) {
+export default async function handler({ res, req }) { // Or using the App Router's route.js file, define your HTTP method function, e.g., export async function GET(request) {
   try {
-    const filePath = process.cwd() + '/pages/nouns/nouns-animals.json';
+    const filePath = process.cwd() + { getDataFromFile };
     const file = await fs.readFile(filePath, 'utf8');
     const jsonData = JSON.parse(file);
-        
+
     return NextResponse.json(word: jsonData);
   } catch (error) {
     console.error('Error reading JSON file:', error);
     // Handle error appropriately, perhaps returning an error response
     return NextResponse.json({ error: 'Failed to load data' }, { status: 500 }); // Example error response
+  }
 }
-} */
 
-/* export async function GET(){
-      const filePath = process.cwd() + getDataFromFile;
-    const file = await fs.readFile(filePath, 'utf8');
-    const jsonData = JSON.parse(file);
-        
-     return NextResponse.json(jsonData);
-    // return "testing";
+export async function GET() {
+  const filePath = process.cwd() + getDataFromFile;
+  const file = await fs.readFile(filePath, 'utf8');
+  const jsonData = JSON.parse(file);
+
+  return NextResponse.json(jsonData);
+  // return "testing";
 
   // return NextResponse.json({ word: 'hello'});
-} */
+}
 
 
-  /* export default async function UsersPage() {
-  // This fetch runs on the server (no client-side code needed here)
-  const res = await fetch('https://api.example.com/users');
-  const data = await res.json();
+/* export default async function UsersPage() {
+// This fetch runs on the server (no client-side code needed here)
+const res = await fetch('https://api.example.com/users');
+const data = await res.json();
  
-  return (
-    <main>
-      <h1>Users</h1>
-      <ul>
-        {data.map((user: any) => (
-          <li key={user.id}>{user.name}</li>
-        ))}
-      </ul>
-    </main>
-  );
+return (
+  <main>
+    <h1>Users</h1>
+    <ul>
+      {data.map((user: any) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  </main>
+);
 } */
