@@ -1,5 +1,5 @@
 interface DataItem {
-    id: number;
-    name: string;
-    // Add other properties as per your JSON structure
+  id: number;
+  name: string;
+  // Add other properties as per your JSON structure
 }

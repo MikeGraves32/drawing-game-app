@@ -1,0 +1,6 @@
+.typography p {
+  font-size: var(--text-base);
+}
+.typography img {
+  border-radius: var(--radius-lg);
+}

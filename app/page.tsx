@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { DataItem } from "../public/types"; // Adjust path as needed
+import { Card } from "./components/Card";
 
 async function getData(filename: string): Promise<DataItem[]> {
   const filePath = path.join(process.cwd(), "public", filename);
@@ -14,7 +15,7 @@ export default async function Page() {
 
   return (
     <div>
-      <h1>Data from File 1</h1>
+      <h1>Noun</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3">
         <ul>
           {data1.map((item) => (
@@ -24,7 +25,7 @@ export default async function Page() {
           ))}
         </ul>
       </div>
-      <h1>Data from File 2</h1>
+      <h1>Verb</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3">
         <ul>
           {data2.map((item) => (
