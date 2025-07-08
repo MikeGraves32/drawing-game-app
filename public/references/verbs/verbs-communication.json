@@ -1,0 +1,22 @@
+[
+{"id": 1, "category": "Communication", "grammarType": "Action Verb", "text": "talking" },
+{"id": 2, "category": "Communication", "grammarType": "Action Verb", "text": "speaking" },
+{"id": 3, "category": "Communication", "grammarType": "Action Verb", "text": "calling" },
+{"id": 4, "category": "Communication", "grammarType": "Action Verb", "text": "writing" },
+{"id": 5, "category": "Communication", "grammarType": "Action Verb", "text": "reading" },
+{"id": 6, "category": "Communication", "grammarType": "Action Verb", "text": "listening" },
+{"id": 7, "category": "Communication", "grammarType": "Action Verb", "text": "asking" },
+{"id": 8, "category": "Communication", "grammarType": "Action Verb", "text": "answering" },
+{"id": 9, "category": "Communication", "grammarType": "Action Verb", "text": "discussing" },
+{"id": 10, "category": "Communication", "grammarType": "Action Verb", "text": "explaining" },
+{"id": 11, "category": "Communication", "grammarType": "Action Verb", "text": "arguing" },
+{"id": 12, "category": "Communication", "grammarType": "Action Verb", "text": "debating" },
+{"id": 13, "category": "Communication", "grammarType": "Action Verb", "text": "presenting" },
+{"id": 14, "category": "Communication", "grammarType": "Action Verb", "text": "describing" },
+{"id": 15, "category": "Communication", "grammarType": "Action Verb", "text": "reporting" },
+{"id": 16, "category": "Communication", "grammarType": "Action Verb", "text": "teaching" },
+{"id": 17, "category": "Communication", "grammarType": "Action Verb", "text": "lecturing" },
+{"id": 18, "category": "Communication", "grammarType": "Action Verb", "text": "whispering" },
+{"id": 19, "category": "Communication", "grammarType": "Action Verb", "text": "shouting" },
+{"id": 20, "category": "Communication", "grammarType": "Action Verb", "text": "texting" }    
+]
