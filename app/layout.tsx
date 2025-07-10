@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav className={inter.className}>
-          <Link href="/">Home</Link> |{" "}
+          <Link href="/">Home</Link> | <Link href="/game">Game Play</Link> |{" "}
           <Link href="/instructions">Game Rules & Instructions</Link> |{" "}
           <Link href="/settings">Settings</Link>
         </nav>
