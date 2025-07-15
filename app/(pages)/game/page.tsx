@@ -24,9 +24,13 @@ export default function GamePlay() {
   const [dataSets, setDataSets] = useState<WordEntry[][]>([[], [], []]);
   const [flipped, setFlipped] = useState<boolean[][]>([[], [], []]);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [timer, setTimer] = useState<number>(30);
+  const [timer, setTimer] = useState<number>(120);
   const [isRoundActive, setIsRoundActive] = useState<boolean>(false);
   const [score, setScore] = useState<number>(0);
+  const [selectedNoun, SetSelectedNoun] = useState("");
+  const [selectedVerb, SetSelectedVerb] = useState("");
+  const [selectedPreposition, SetSelectedPreposition] = useState("");
+  const [selectedAdverb, SetSelectedAdverb] = useState("");
 
   useEffect(() => {
     if (isRoundActive && timer > 0) {
@@ -54,7 +58,7 @@ export default function GamePlay() {
     );
     setDataSets(allData);
     setFlipped(allData.map((set) => Array(set.length).fill(false)));
-    setTimer(30);
+    setTimer(120);
     setIsRoundActive(true);
     setScore(0);
   };
@@ -108,12 +112,12 @@ export default function GamePlay() {
                     )}
                   >
                     <CardContent className="flex items-center justify-center h-full text-white text-xl">
-                      Word
+                      {entry.category}
                     </CardContent>
                   </Card>
                   <Card className="absolute w-full h-full rotate-y-180 backface-hidden bg-white">
                     <CardContent className="flex items-center justify-center h-full text-xl">
-                      {entry.word}
+                      {entry.text}
                     </CardContent>
                   </Card>
                 </div>
