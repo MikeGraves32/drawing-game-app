@@ -27,10 +27,10 @@ export default function GamePlay() {
   const [timer, setTimer] = useState<number>(120);
   const [isRoundActive, setIsRoundActive] = useState<boolean>(false);
   const [score, setScore] = useState<number>(0);
-  const [selectedNoun, SetSelectedNoun] = useState("");
-  const [selectedVerb, SetSelectedVerb] = useState("");
-  const [selectedPreposition, SetSelectedPreposition] = useState("");
-  const [selectedAdverb, SetSelectedAdverb] = useState("");
+  // const [selectedNoun, SetSelectedNoun] = useState("");
+  // const [selectedVerb, SetSelectedVerb] = useState("");
+  // const [selectedPreposition, SetSelectedPreposition] = useState("");
+  // const [selectedAdverb, SetSelectedAdverb] = useState("");
 
   useEffect(() => {
     if (isRoundActive && timer > 0) {
@@ -117,7 +117,7 @@ export default function GamePlay() {
                   </Card>
                   <Card className="absolute w-full h-full rotate-y-180 backface-hidden bg-white">
                     <CardContent className="flex items-center justify-center h-full text-xl">
-                      {entry.text}
+                      Testing
                     </CardContent>
                   </Card>
                 </div>
@@ -129,7 +129,7 @@ export default function GamePlay() {
 
       {!isRoundActive && timer === 0 && (
         <div className="mt-8 text-center text-lg font-semibold text-red-600">
-          ⏳ <p>Time's up! Final Score: {score}</p>
+          ⏳ <p>Time is up! Final Score: {score}</p>
         </div>
       )}
     </main>
