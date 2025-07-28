@@ -6,16 +6,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import classNames from "classnames";
 
 interface WordEntry {
-  word: string;
+  id: number;
   category: string;
+  grammarType: string;
+  text: string;
 }
 
 const colors = ["bg-red-500", "bg-green-500", "bg-blue-500"];
 const jsonFiles = [
-  "/references/nouns/nouns-animals.json",
-  "/references/verbs/verbs-communication.json",
-  "/references/prepositions/preprosition-condition.json",
-  "/references/adverbs/adverbs-balance.json",
+  "/data/nouns/nouns-animals.json",
+  "/data/verbs/verbs-communication.json",
+  "/data/prepositions/preprosition-condition.json",
+  "/data/adverbs/adverbs-balance.json",
 ];
 
 const categories = ["all", "Common Noun", "Action Verb", "Adverbs"];
@@ -48,11 +50,12 @@ export default function GamePlay() {
       jsonFiles.map(async (file) => {
         const res = await fetch(file);
         const json: WordEntry[] = await res.json();
-        console.log("JSON from TypeScript!: " + json);
+        // console.log("JSON from TypeScript!: " + json);
         const filtered =
           selectedCategory === "all"
             ? json
             : json.filter((w) => w.category === selectedCategory);
+        console.log("filtered from TypeScript!: " + filtered);
         return filtered.sort(() => 0.5 - Math.random()).slice(0, 6);
       })
     );

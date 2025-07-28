@@ -1,12 +1,12 @@
 [
-{ "id": 1, "category": "Buildings", "grammarType": "Common Noun", "text": "a museum"}, 
-{ "id": 2, "category": "Buildings", "grammarType": "Common Noun", "text": "a library"}, 
-{ "id": 3, "category": "Buildings", "grammarType": "Common Noun", "text": "a theater"}, 
-{ "id": 4, "category": "Buildings", "grammarType": "Common Noun", "text": "a church"}, 
-{ "id": 5, "category": "Buildings", "grammarType": "Common Noun", "text": "a temple"}, 
-{ "id": 6, "category": "Buildings", "grammarType": "Common Noun", "text": "a stadium"}, 
-{ "id": 7, "category": "Buildings", "grammarType": "Common Noun", "text": "a factory"}, 
-{ "id": 8, "category": "Buildings", "grammarType": "Common Noun", "text": "a warehouse"}, 
-{ "id": 9, "category": "Buildings", "grammarType": "Common Noun", "text": "a courthouse"}, 
-{ "id": 10, "category": "Buildings", "grammarType": "Common Noun", "text": "a gym"}     
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a museum"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a library"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a theater"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a church"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a temple"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a stadium"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a factory"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a warehouse"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a courthouse"}, 
+    { "category": "Buildings", "grammarType": "Common Noun", "text": "a gym"}     
 ]
