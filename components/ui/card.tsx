@@ -1,4 +1,4 @@
-import * as React from "react"
+/* import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -90,3 +90,20 @@ export {
   CardDescription,
   CardContent,
 }
+ */
+
+import React from "react";
+
+interface CardProps {
+  title: string;
+}
+
+const Card: React.FC<CardProps> = ({ title }) => {
+  return (
+    <div className="border rounded-lg p-4 shadow-md w-64 text-center bg-white">
+      <p className="text-lg font-semibold">{title}</p>
+    </div>
+  );
+};
+
+export default Card;

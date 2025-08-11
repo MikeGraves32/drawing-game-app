@@ -12,8 +12,8 @@ const nounFiles = [
 
 const nounsAnimals = "data/nouns/nouns-animals.json";
 const nounsBuilding = "data/nouns/nouns-buildings.json";
-const verbsCommunication = "data/verbs/verbs-communication.json";
-const verbsCookingFood = "data/verbs/verbs-cooking-food.json";
+const verbsCommunication = "data/verbs-communication.json";
+const verbsCookingFood = "data/verbs-cooking-food.json";
 // import Card from "./components/Card";
 
 async function getData(filename: string): Promise<DataItem[]> {
@@ -35,11 +35,11 @@ export default async function Page() {
 
   return (
     <div>
-      <h1>Noun</h1>
+      <h1>Nouns</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3">
         <ul>
           {" "}
-          {dataNounsAnimals.map((item) => (
+          {dataNounsAnimals.map((item, id) => (
             <li key={item.id}>
               {item.grammarType} | {item.category} | {item.text}
             </li>

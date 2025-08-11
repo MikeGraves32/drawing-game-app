@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 /* import { useEffect, useState } from "react";
 
 export default function MyPage() {
@@ -28,40 +28,55 @@ export default function MyPage() {
   );
 } */
 
-import { promises as fs } from "fs";
-import path from "path";
+//
 
-export default async function Page() {
-  const targetValue = "Common Noun";
-  const fileNames = [
-    "/data/nouns/nouns-animals.json",
-    "/data/verbs/verbs-communication.json",
-    "/data/prepositions/preprosition-condition.json",
-    "/data/adverbs/adverbs-balance.json",
-  ];
-  const matchedData = [];
+import { useEffect, useState } from "react";
+import Card from "../../components/Card";
+import { WordEntry } from "../../../public/types";
+import { GrammarType } from "../../../public/types";
 
-  const files = await Promise.all(
-    fileNames.map(async (fileName) => {
-      const filePath = path.join(process.cwd(), "public", fileName);
-      const fileContents = await fs.readFile(filePath, "utf8");
-      console.log("file contents: " + fileContents);
-      return JSON.parse(fileContents);
-    })
-  );
+export default function Home() {
+  const [words, setWords] = useState<WordEntry[]>([]);
+  const [randomWords, setRandomWords] = useState<Record<string, string>>({});
 
-  files.forEach((data) => {
-    // Replace with your matching logic
-    if (data.includes(targetValue)) {
-      console.log("data " + data);
-      matchedData.push(data);
-      console.log("matchedData " + matchedData);
-    }
-  });
+  const grammarTypes = ["noun", "verb", "preposition", "adverb"];
+
+  useEffect(() => {
+    fetch("../../api/words")
+      .then((res) => res.json())
+      .then((data) => setWords(data.words));
+  }, []);
+
+  function pickRandomWords() {
+    const picked: Record<string, string> = {};
+    grammarTypes.forEach((type) => {
+      const filtered = words.filter((w) => w.grammarType === type);
+      if (filtered.length > 0) {
+        const random = filtered[Math.floor(Math.random() * filtered.length)];
+        picked[type] = random.text;
+      }
+    });
+    setRandomWords(picked);
+  }
+
   return (
-    <div>
-      {/* Render the matchedData here */}
-      <pre>{JSON.stringify(matchedData, null, 2)}</pre>
+    <div className="flex flex-col items-center space-y-4 p-8">
+      <button
+        onClick={pickRandomWords}
+        className="bg-blue-500 text-white px-4 py-2 rounded"
+      >
+        Pick Random Words
+      </button>
+
+      <div className="grid grid-cols-2 gap-6">
+        {Object.entries(randomWords).map(([type, text]) => (
+          <Card
+            key={type}
+            title={`${type.toUpperCase()}: ${text}`}
+            description={undefined}
+          />
+        ))}
+      </div>
     </div>
   );
 }

@@ -3,8 +3,8 @@
 // import { GetStaticProps } from "next";
 // import { WordData } from "../../types/data"; // Adjust path as needed
 
-import React from "react";
-import data from "../../../public/data/nouns/nouns-buildings.json"; // Adjust path as needed
+/* import React from "react";
+import data from "../../api/word"; // Adjust path as needed
 import { WordData } from "../../types/data"; // Adjust path as needed
 // interface HomeProps {
 //   data: WordData;
@@ -20,4 +20,4 @@ export default async function GamePage() {
       <p>Word: {wordData.text}</p>
     </div>
   );
-}
+} */
