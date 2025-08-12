@@ -51,6 +51,7 @@ export default function Home() {
     const picked: Record<string, string> = {};
     grammarTypes.forEach((type) => {
       const filtered = words.filter((w) => w.grammarType === type);
+      console.log("filtered length " + filtered.length + " - " + filtered);
       if (filtered.length > 0) {
         const random = filtered[Math.floor(Math.random() * filtered.length)];
         picked[type] = random.text;

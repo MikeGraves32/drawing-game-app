@@ -31,6 +31,13 @@ export default async function Page() {
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
         ))}
+        {/* <ul>
+          {filteredData.map((data, index) => (
+            <li key={data.text}>
+              {data.grammarType} | {data.category} | {data.text}
+            </li>
+          ))}
+        </ul> */}
       </div>
     );
   } catch (error) {
