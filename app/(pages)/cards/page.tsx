@@ -14,6 +14,7 @@ export default async function Page() {
         // Ensure only JSON files are processed
         const filePath = path.join(jsonDirectory, filename);
         const fileContents = await fs.readFile(filePath, "utf8");
+        console.log("filecontents " + JSON.parse(fileContents));
         return JSON.parse(fileContents);
       }
       return null; // Skip non-JSON files

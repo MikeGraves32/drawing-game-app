@@ -150,3 +150,18 @@ main {
     @apply bg-background text-foreground;
   }
 }
+
+h1 {
+  font-size: 2em;
+  color: #0056b3;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #007bff;
+}
+
+h3 {
+  font-size: 1em;
+  color: #6c757d;
+}
