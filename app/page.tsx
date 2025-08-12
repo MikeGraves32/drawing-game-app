@@ -40,12 +40,14 @@ export default async function Page() {
         <ul>
           {" "}
           {dataNounsAnimals.map((item, id) => (
-            <li key={item.id}>
+            <li key={item.text}>
               {item.grammarType} | {item.category} | {item.text}
             </li>
           ))}{" "}
+        </ul>
+        <ul>
           {dataNounsBuilding.map((item) => (
-            <li key={item.id}>
+            <li key={item.text}>
               {item.grammarType} | {item.category} | {item.text}
             </li>
           ))}
