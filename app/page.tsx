@@ -38,12 +38,11 @@ export default async function Page() {
       <h1>Nouns</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3">
         <ul>
-          {" "}
           {dataNounsAnimals.map((item, id) => (
             <li key={item.text}>
               {item.grammarType} | {item.category} | {item.text}
             </li>
-          ))}{" "}
+          ))}
         </ul>
         <ul>
           {dataNounsBuilding.map((item) => (
