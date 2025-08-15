@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import FlipCard from "@/app/components/FlipCard";
+// import FlipCard from "@/app/components/GrammarCard";
 import nouns from "@/public/data/nouns.json";
 import verbs from "@/public/data/verbs.json";
 import prepositions from "@/public/data/prepositions.json";
@@ -29,7 +30,7 @@ export default function HomePage() {
     ];
     setSelectedCards(picks);
     setFlipped(false);
-    setTimeout(() => setFlipped(true), 3000); // delay for flip
+    setTimeout(() => setFlipped(true), 5000); // delay for flip
   };
 
   return (

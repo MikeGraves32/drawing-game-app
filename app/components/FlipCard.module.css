@@ -51,16 +51,16 @@
   font-weight: bold;
 }
 
-/* .cardPreposition {
+.cardPreposition {
   background-image: url("../img/card-preposition.png");
   background-size: cover;
   height: 512px;
-  color: gray;
-} */
+  color: #7d9d52;
+}
 
-/* .cardAdverb {
+.cardAdverb {
   background-image: url("../img/card-adverb.png");
   background-size: cover;
   height: 512px;
-  color: gray;
-} */
+  color: #f2c649;
+}
