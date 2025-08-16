@@ -1,8 +1,8 @@
 "use client";
 
-/* import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import Card from "@/components/ui/card";
 import classNames from "classnames";
 
 interface WordEntry {
@@ -114,14 +114,14 @@ export default function GamePlay() {
                       colors[i]
                     )}
                   >
-                    <CardContent className="flex items-center justify-center h-full text-white text-xl">
+                    {/* <CardContent className="flex items-center justify-center h-full text-white text-xl">
                       {entry.category}
-                    </CardContent>
+                    </CardContent> */}
                   </Card>
                   <Card className="absolute w-full h-full rotate-y-180 backface-hidden bg-white">
-                    <CardContent className="flex items-center justify-center h-full text-xl">
+                    {/* <CardContent className="flex items-center justify-center h-full text-xl">
                       Testing
-                    </CardContent>
+                    </CardContent> */}
                   </Card>
                 </div>
               </div>
@@ -138,4 +138,3 @@ export default function GamePlay() {
     </main>
   );
 }
- */
