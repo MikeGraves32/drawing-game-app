@@ -48,7 +48,7 @@ export default function HomePage() {
         Start
       </button>
 
-      <div style={{ display: "flex", gap: "40px" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "30px" }}>
         {selectedCards.map((card, idx) => (
           <FlipCard
             key={idx}
