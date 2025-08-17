@@ -38,6 +38,25 @@
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75); /* Black shadow with 50% opacity */
 }
 
+.cardCategory,
+.cardText {
+  /* Set desired positioning (e.g., top, left, right, bottom) */
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+}
+
+.cardCategory {
+  position: fixed;
+  top: 20px;
+  z-index: 1;
+}
+
+.cardText {
+  z-index: 2;
+}
+
 .cardNoun {
   background-image: url("../img/card-noun.png");
   background-size: cover;
