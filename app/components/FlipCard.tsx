@@ -51,17 +51,21 @@ export default function FlipCard({
   ) {
     if (jsonData.grammarType === "Common Noun") {
       myElement.classList.add(`${styles.cardNoun}`);
+      // backElement.classList.add(`${styles.backNoun}`);
       console.log("if jsonData.grammarType cardNoun" + jsonData.grammarType);
     } else if (jsonData.grammarType === "Action Verb") {
       myElement.classList.add(`${styles.cardVerb}`);
+      // backElement.classList.add(`${styles.cardVerb}`);
       console.log("if jsonData.grammarType cardVerb" + jsonData.grammarType);
     } else if (jsonData.grammarType === "Preposition") {
       myElement.classList.add(`${styles.cardPreposition}`);
+      // backElement.classList.add(`${styles.cardPreposition}`);
       console.log(
         "if jsonData.grammarType cardPreposition" + jsonData.grammarType
       );
     } else if (jsonData.grammarType === "Adverb") {
       myElement.classList.add(`${styles.cardAdverb}`);
+      // backElement.classList.add(`${styles.cardAdverb}`);
       console.log("if jsonData.grammarType cardAdverb" + jsonData.grammarType);
     }
   }
@@ -74,17 +78,21 @@ export default function FlipCard({
   ) {
     if (jsonData.grammarType === "Common Noun") {
       backElement.classList.add(`${styles.backNoun}`);
+      // backElement.classList.add(`${styles.backNoun}`);
       console.log("if jsonData.grammarType cardNoun" + jsonData.grammarType);
     } else if (jsonData.grammarType === "Action Verb") {
       backElement.classList.add(`${styles.backVerb}`);
+      // backElement.classList.add(`${styles.backVerb}`);
       console.log("if jsonData.grammarType cardVerb" + jsonData.grammarType);
     } else if (jsonData.grammarType === "Preposition") {
       backElement.classList.add(`${styles.backPreposition}`);
+      // backElement.classList.add(`${styles.backPreposition}`);
       console.log(
         "if jsonData.grammarType cardPreposition" + jsonData.grammarType
       );
     } else if (jsonData.grammarType === "Adverb") {
       backElement.classList.add(`${styles.backAdverb}`);
+      // backElement.classList.add(`${styles.backAdverb}`);
       console.log("if jsonData.grammarType cardAdverb" + jsonData.grammarType);
     }
   }
@@ -102,10 +110,10 @@ export default function FlipCard({
           </div>
         </div>
         <div id={grammarType + "_back"} className={styles.cardBack}>
-          <div className="cardCategory">
-            <h3>{category}</h3>
+          <div className={styles.cardCategory}>
+            <h5>{category}</h5>
           </div>
-          <div className="cardText">
+          <div className={styles.cardText}>
             <p>{text}</p>
           </div>
         </div>
