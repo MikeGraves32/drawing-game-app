@@ -34,13 +34,13 @@ export default function HomePage() {
   };
 
   return (
-    <main style={{ padding: "2rem" }}>
+    <main style={{ padding: ".5rem" }}>
       <h1>Grammar Flip Cards</h1>
       <button
         onClick={startRound}
         style={{
           padding: "10px 20px",
-          marginBottom: "20px",
+          marginBottom: "4px",
           fontSize: "16px",
           cursor: "pointer",
         }}

@@ -52,6 +52,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 5rem;
+  background-color: #bdb76b;
 }
 
 nav {
@@ -64,7 +65,7 @@ nav a {
 }
 
 main {
-  padding: 20px;
+  padding: 8px;
 }
 
 .sm\:grid-cols-3 {
