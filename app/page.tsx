@@ -17,6 +17,7 @@ interface WordItem {
 export default function HomePage() {
   const [flipped, setFlipped] = useState(false);
   const [selectedCards, setSelectedCards] = useState<WordItem[]>([]);
+  const [buttonText, setButtonText] = useState<string>("Start the Game");
 
   const getRandomItem = (arr: WordItem[]): WordItem =>
     arr[Math.floor(Math.random() * arr.length)];
@@ -31,6 +32,7 @@ export default function HomePage() {
     setSelectedCards(picks);
     setFlipped(false);
     setTimeout(() => setFlipped(true), 5000); // delay for flip
+    setButtonText("Next Round");
   };
 
   return (
@@ -45,7 +47,7 @@ export default function HomePage() {
           cursor: "pointer",
         }}
       >
-        Start
+        {buttonText}
       </button>
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: "30px" }}>
