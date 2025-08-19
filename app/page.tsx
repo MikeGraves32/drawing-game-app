@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import FlipCard from "@/app/components/FlipCard";
 import Image from "next/image"; // Assuming you're using next/image
+import Button from "@/app/components/Button/Button";
 import GrammarGoneWild from "@/public/img/grammar-gone-wild.png";
 // import FlipCard from "@/app/components/GrammarCard";
 import nouns from "@/public/data/nouns.json";
@@ -65,7 +66,8 @@ export default function HomePage() {
   return (
     <main style={{ padding: ".5rem" }}>
       <h1>Grammar Flip Cards</h1>
-      <button
+      <Button
+        label={buttonText}
         onClick={startRound}
         style={{
           padding: "10px 20px",
@@ -73,12 +75,12 @@ export default function HomePage() {
           fontSize: "16px",
           cursor: "pointer",
         }}
-      >
-        {buttonText}
-      </button>
-      <span className="ml-auto font-semibold">
-        ⏱ {formattedMinutes}:{formattedSeconds}
-      </span>
+      ></Button>
+      <div>
+        <span className="ml-auto font-semibold">
+          ⏱ {formattedMinutes}:{formattedSeconds}
+        </span>
+      </div>
       {/* <span>
         {formattedMinutes}:{formattedSeconds}
       </span> */}
