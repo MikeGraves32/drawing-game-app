@@ -4,14 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-// app/layout.tsx (or pages/_app.tsx if using the Pages Router)
-import localFont from "next/font/local";
-
-const bubbleFont = localFont({
-  src: "./public/fonts/bubble-font.woff2", // Adjust path based on your directory structure
-  variable: "--font-bubble", // Optional: Define a CSS variable
-});
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,7 +33,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bubbleFont.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav className={inter.className}>
           <Link href="/">Home</Link> | <Link href="/game">Game Play</Link> |{" "}
