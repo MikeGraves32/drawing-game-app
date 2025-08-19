@@ -18,20 +18,6 @@ export default function FlipCard({
 }: FlipCardProps) {
   const [isClient, setIsClient] = useState(false);
 
-  const [timer, setTimer] = useState<number>(120);
-  const [isRoundActive, setIsRoundActive] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (isRoundActive && timer > 0) {
-      const interval = setInterval(() => {
-        setTimer((prev) => prev - 1);
-      }, 1000);
-      return () => clearInterval(interval);
-    } else if (timer === 0) {
-      setIsRoundActive(false);
-    }
-  }, [timer, isRoundActive]);
-
   useEffect(() => {
     // This code only runs on the client side
     setIsClient(true);
